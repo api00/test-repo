@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to My Website</title>
+    <style>
+        body {
+            background: #f5f7fa;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .greeting {
+            background: #fff;
+            padding: 2rem 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        .website-name {
+            color: #0078d4;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        .domain-name {
+            color: #333;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        .welcome-msg {
+            color: #444;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="greeting">
+        <div class="domain-name" id="domainName"></div>
+        <div class="welcome-msg">Welcome! Your website is now live.</div>
+    </div>
+    <script>
+        // Set domain name from location.hostname
+        document.getElementById('domainName').textContent = window.location.hostname;
+    </script>
+</body>
+</html>
